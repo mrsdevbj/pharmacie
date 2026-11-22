@@ -12,12 +12,7 @@ $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false,
-];git init
-git add .
-git commit -m "Premier commit"
-git branch -M main
-git remote add origin https://github.com/mrsdevbj/pharmacie.git
-git push -u origin main
+];
 
 try {
     $dsn = "mysql:host=$host;dbname=$db";
