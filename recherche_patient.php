@@ -197,6 +197,51 @@ if ($searched) {
             padding: 0 0.5rem;
         }
 
+        .create-account-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 0 0.9rem;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            border-radius: 10px;
+            background: rgba(16, 185, 129, 0.12);
+            color: #6ee7b7;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: 0.2s ease;
+        }
+        .create-account-btn:hover {
+            background: #10b981;
+            color: #fff;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .login-account-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 0 0.9rem;
+            border: 1px solid rgba(52, 211, 153, 0.18);
+            border-radius: 10px;
+            background: transparent;
+            color: #d1fae5;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .login-account-btn:hover {
+            border-color: rgba(52, 211, 153, 0.42);
+            background: rgba(16, 185, 129, 0.08);
+        }
+
         /* MAIN SEARCH & CONTAINER */
         main {
             flex: 1;
@@ -422,6 +467,18 @@ if ($searched) {
                 padding: 0.85rem;
                 border-radius: 12px;
             }
+            .header-actions {
+                gap: 0.35rem;
+            }
+            .header-badge {
+                display: none;
+            }
+            .create-account-btn,
+            .login-account-btn {
+                min-height: 36px;
+                padding: 0 0.65rem;
+                font-size: 0.72rem;
+            }
         }
     </style>
 </head>
@@ -432,9 +489,17 @@ if ($searched) {
             <div class="pharmacy-cross"></div>
             <span>Pharmacie OLG</span>
         </a>
-        <div class="header-badge">
-            <span class="dot-pulse"></span>
-            En ligne
+        <div class="header-actions">
+            <?php if (!empty($_SESSION['client_id'])): ?>
+                <a href="espace_client.php" class="login-account-btn">Mon espace</a>
+            <?php else: ?>
+                <a href="connexion_client.php" class="login-account-btn">Se connecter</a>
+            <?php endif; ?>
+            <a href="creer_compte.php" class="create-account-btn">Créer un compte client</a>
+            <div class="header-badge">
+                <span class="dot-pulse"></span>
+                En ligne
+            </div>
         </div>
     </header>
 
