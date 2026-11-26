@@ -1,0 +1,20 @@
+<?php
+return [
+ ['/admin/utilisateurs',['GET','POST'],'utilisateurs.php',true],
+ ['/admin/medicaments/(?P<id>[1-9][0-9]*)/stock',['GET','POST'],'stock.php',true],
+ ['/pharmacies-de-garde',['GET'],'gardes_public.php',false],
+ ['/admin/reservations',['GET','POST'],'reservations_admin.php',true],
+ ['/admin/pharmacies-de-garde',['GET','POST'],'gardes_admin.php',true],
+ ['/', ['GET'], 'recherche_patient.php',false],
+ ['/connexion',['GET','POST'],'connexion_client.php',false],
+ ['/inscription',['GET','POST'],'creer_compte.php',false],
+ ['/mon-compte',['GET','POST'],'espace_client.php',false],
+ ['/deconnexion',['POST'],'deconnexion_client.php',false],
+ ['/admin/connexion',['GET','POST'],'login.php',false],
+ ['/admin/deconnexion',['POST'],'logout.php',true],
+ ['/admin(?:/medicaments)?',['GET'],'index.php',true],
+ ['/admin/medicaments/ajouter',['GET','POST'],'ajouter.php',true],
+ ['/admin/medicaments/importer',['GET','POST'],'importer.php',true],
+ ['/admin/medicaments/(?P<id>[1-9][0-9]*)/modifier',['GET','POST'],'modifier.php',true],
+ ['/admin/medicaments/(?P<id>[1-9][0-9]*)/supprimer',['POST'],'supprimer.php',true],
+];

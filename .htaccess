@@ -1,0 +1,2 @@
+# Deploy with DocumentRoot public/; this prevents serving private files if placed in the wrong root.
+Require all denied

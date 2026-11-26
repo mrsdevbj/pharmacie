@@ -1,3 +1,9 @@
-db.php
+.env
+/db.php
+/storage/database/*
+!/storage/database/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+*.sqlite*
 cookies.txt
 tmp_cookies.txt
